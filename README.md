@@ -1,6 +1,6 @@
-# Course Demos repository
+# Course repository (Demos)
 
-## Bottom-up WS:
+## Bottom-up Web service (php)
 
 1. Simple Web service : 
   - webservice.php
@@ -16,7 +16,7 @@
   - dbconn.php (database connect)
 
 
-## Top-down Web service : 
+## Top-down Web service (php)
 - HelloYou.php (App)
 - Hello.WSDL (Contract)
 - HelloYouService.php
