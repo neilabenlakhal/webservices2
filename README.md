@@ -6,11 +6,11 @@
   - webservice.php
   - client.php
 
-1. Complex DataType Web service : 
+2. Complex DataType Web service : 
   - webservicescomplecEndpoints.php
   - clientComplexeEndpoints.php
 
-1. Complex Web service invoked behind an interface: 
+3. Complex Web service invoked behind an interface: 
   - webservice-server.php
   - webservice-client.php
   - dbconn.php (database connect)
