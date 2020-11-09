@@ -1,39 +1,25 @@
-# How to create web services in php using NuSOAP library
+# Course Demos repository
 
-Download code or clone repository in to your system. If you have GIT installed. Open command line and go to root direcotry (www or wwwroot) of your WAMP, MAMP or XAMPP directory.
+Bottom-up WS:
 
-Type following command.
+- Simple Web service
+webservice.php
+client.php
 
-` git clone git@github.com:programmer-blog/web-services-in-php.git `
+-Complex DataType Web service : 
+webservicescomplecEndpoints.php
+clientComplexeEndpoints.php
 
-Tasks performed in this tutorial
-
-
-1. Create a MySQL database and a table for books.
-
-2. Insert sample data into the database table.
-
-3.  HTML form to get ISBN number from user.
-
-4. POST form data to a php page and send to web service.
-
-5. Create a web service that connects to MySQL database.
-
-6. Fetch book information based on ISBN number and respond to client.
-
-7. Client receives data from web service and display to user.
-
-8. Add a new form to insert book data
-
-9. Send new book data to web service
-
-10. Insert data into mysql database using SOAP webservice
+- complex Web service invoked behind an interface: 
+webservice-server.php
+webservice-client.php
+dbconn.php (database connect)
 
 
+Top-down Web service : 
+HelloYou.php (App)
+Hello.WSDL (Contract)
+HelloYouService.php
+HelloYouClient.php
 
-## To read detailed tutorial.
-   http://programmerblog.net/web-services-in-php-using-nusoap/
-
-### Programmer Blog
-  http://programmerblog.net
 
