@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/mywebservices/topdown/library-server.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Library" targetNamespace="http://localhost/mywebservices/topdown/library-server.php">
+  <types>
+    <xsd:schema targetNamespace="http://localhost/mywebservices/topdown/library-server.php">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </xsd:schema>
+  </types>
+  <portType name="LibraryPort">
+    <operation name="getBooks">
+      <input message="tns:getBooksIn"/>
+    </operation>
+    <operation name="greetUser">
+      <input message="tns:greetUserIn"/>
+    </operation>
+  </portType>
+  <binding name="LibraryBinding" type="tns:LibraryPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getBooks">
+      <soap:operation soapAction="http://localhost/mywebservices/topdown/library-server.php#getBooks"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/mywebservices/topdown/library-server.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/mywebservices/topdown/library-server.php"/>
+      </output>
+    </operation>
+    <operation name="greetUser">
+      <soap:operation soapAction="http://localhost/mywebservices/topdown/library-server.php#greetUser"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/mywebservices/topdown/library-server.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/mywebservices/topdown/library-server.php"/>
+      </output>
+    </operation>
+  </binding>
+  <message name="getBooksIn"/>
+  <message name="greetUserIn">
+    <part name="name" type="xsd:anyType"/>
+  </message>
+  <service name="LibraryService">
+    <port name="LibraryPort" binding="tns:LibraryBinding">
+      <soap:address location="http://localhost/mywebservices/topdown/library-server.php"/>
+    </port>
+  </service>
+</definitions>
