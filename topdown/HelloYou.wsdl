@@ -51,7 +51,7 @@
                 <documentation>Retourne une phrase simple </documentation>
                 <!-- part 8 : Port -->
                 <port name="HelloYouPort" binding="typens:HelloYouBinding"><!-- modify this -->
-                        <soap:address location="http://localhost/mywebservices/topdown/HelloYouService.php"/>
+                        <soap:address location="http://localhost:8888/mywebservices/topdown/HelloYouService.php"/>
                 </port>
         </service>
 </definitions>

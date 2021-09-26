@@ -6,7 +6,7 @@ require "vendor/autoload.php";
 //don't forget to create composer.json file
 
 $class="Library";
-$serviceURI="http://localhost/mywebservices/topdown/library-server.php";
+$serviceURI="http://localhost:8888/mywebservices/topdown/library-server.php";
 $expectedFile="library.wsdl";
 
 // include the class we want to use
@@ -22,5 +22,5 @@ file_put_contents($expectedFile, $gen->dump());
 
 //show a link to generated WSDL
 echo "Generated WSDL:";
-echo "<a href='http://localhost/mywebservices/topdown/$expectedFile'>$expectedFile</a><br/>";
+echo "<a href='http://localhost:8888/mywebservices/topdown/$expectedFile'>$expectedFile</a><br/>";
 ?>

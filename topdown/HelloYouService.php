@@ -6,7 +6,7 @@ ini_set("soap.wsdl_cache_enabled", "0");
 include('HelloYou.php');
  
 // give contract location 
-$serveurSOAP = new SoapServer('http://localhost/mywebservices/topdown/HelloYou.wsdl');
+$serveurSOAP = new SoapServer('http://localhost:8888/mywebservices/topdown/HelloYou.wsdl');
  
 // Add endpoints to the web services (getHello)
 $serveurSOAP->addFunction('getHello');
@@ -21,6 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 // print link to WSDL
 else {
 	echo 'Web Service HelloYou.<br />';
-	echo '<a href="http://localhost/mywebservices/topdown/HelloYou.wsdl">WSDL</a><br />';    
+	echo '<a href="http://localhost:8888/mywebservices/topdown/HelloYou.wsdl">WSDL</a><br />';    
 }  
 ?>
